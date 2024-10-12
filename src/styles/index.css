@@ -52,6 +52,7 @@
     font-weight: bold;
     color: white;
     z-index: 1;
+    animation: textFadeIn 3s ease-in-out infinite alternate;
 }
 
 .content p {
@@ -60,7 +61,21 @@
     max-width: 800px;
     text-align: center;
     z-index: 1;
+    animation: textFadeIn 3s ease-in-out infinite alternate;
 }
+
+/* Definisi animasi untuk teks */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .content::before {
     content: '';
@@ -250,27 +265,11 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 20px;
         flex-direction: column;
     }
 
-    .navbar {
-        flex-direction: column;
+    .content {
         padding: 10px;
-        align-items: flex-start; 
-        z-index: 2; 
-    }
-
-    .navbar a {
-        font-size: 0.9rem;
-        margin: 5px 0;
-        color: white; /* Memastikan teks tautan tetap terlihat */
-    }
-
-    .navbar h1 {
-        font-size: 1.5rem; /* Menyesuaikan ukuran font judul */
-        margin-bottom: 10px; /* Menambahkan jarak bawah untuk judul */
-        color: white; /* Memastikan warna judul terlihat jelas */
     }
 
     .content h1 {
@@ -278,10 +277,21 @@
         margin-bottom: 10px;
     }
 
+    .content-2 h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .content-2 p {
+        font-size: 0.5rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
     .content p {
-        font-size: 0.8rem;
-        line-height: 1.5; /* Meningkatkan keterbacaan */
-        margin-bottom: 20px; /* Menambahkan jarak bawah untuk paragraf */
+        font-size: 0.7rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
     }
 
     .photo-item {
